@@ -48,7 +48,7 @@ const projects = [
 ];
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#030508] via-[#07111F] to-[#030508] text-[#E2E8F0]">
@@ -153,13 +153,13 @@ export default function Home() {
             <div className="glass-card p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-6 text-[#E2E8F0]">About AKAZA</h3>
               <p className="text-[#94A3B8] mb-6 leading-relaxed">
-                I'm Abdurrahman Oriolowo, professionally known by my nickname and personal brand, AKAZA. 
-                I'm a Frontend Developer, Software Development enthusiast, Frontend Development Tutor at RIIT GLOBAL TECH, 
+                I&apos;m Abdurrahman Oriolowo, professionally known by my nickname and personal brand, AKAZA. 
+                I&apos;m a Frontend Developer, Software Development enthusiast, Frontend Development Tutor at RIIT GLOBAL TECH, 
                 and Computer Science undergraduate at Miva Open University.
               </p>
               <p className="text-[#94A3B8] mb-6 leading-relaxed">
                 I focus on building responsive, intuitive, and visually engaging web interfaces using modern web technologies. 
-                Beyond coding, I'm passionate about teaching, mentoring aspiring developers, and helping others develop practical technology skills.
+                Beyond coding, I&apos;m passionate about teaching, mentoring aspiring developers, and helping others develop practical technology skills.
               </p>
               <p className="text-[#94A3B8] leading-relaxed">
                 My long-term goal is to become a skilled Full-Stack Developer, build innovative digital products, and contribute 
