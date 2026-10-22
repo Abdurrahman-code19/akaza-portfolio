@@ -48,7 +48,7 @@ const projects = [
 ];
 
 export default function Home() {
-  const [mobileMenuOpen] = useState(false);
+  // const [mobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#030508] via-[#07111F] to-[#030508] text-[#E2E8F0]">
@@ -376,7 +376,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4" style={{fontFamily: 'var(--font-sora)'}}>
               Get In <span className="bg-gradient-to-r from-[#4AA3FF] to-[#22D3EE] bg-clip-text text-transparent">Touch</span>
             </h2>
-            <p className="text-[#94A3B8] text-lg">Let's discuss your next project or opportunity</p>
+            <p className="text-[#94A3B8] text-lg">Let&apos;s discuss your next project or opportunity</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="mailto:abefeori@gmail.com" className="glass-card p-6 rounded-xl hover:border-[#4AA3FF]/50 transition-all duration-300 group text-center">
