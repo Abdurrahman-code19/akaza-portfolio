@@ -88,6 +88,8 @@ function ProjectBody({
         {project.live && (
           <a
             href={project.live}
+            target={project.live.startsWith("http") ? "_blank" : undefined}
+            rel={project.live.startsWith("http") ? "noopener noreferrer" : undefined}
             className="inline-flex items-center gap-1.5 text-sm text-silver transition-colors hover:text-platinum"
           >
             Live
@@ -117,7 +119,7 @@ function ProjectVisualButton({
       className={`group relative block w-full overflow-hidden rounded-[24px] border border-[color:var(--hairline)] bg-midnight/30 text-left transition-[border-color,box-shadow] duration-500 hover:border-electric-blue/35 hover:shadow-[0_0_60px_-10px_rgba(48,130,197,0.25)] ${className}`}
     >
       <div className="aspect-[16/10] w-full transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.035]">
-        <ProjectVisual variant={project.variant} />
+        <ProjectVisual variant={project.variant} image={project.image} imageAlt={project.imageAlt} />
       </div>
       <span className="pointer-events-none absolute bottom-4 right-4 flex items-center gap-1.5 rounded-full border border-[color:var(--hairline-strong)] bg-void/80 px-3 py-1.5 font-mono text-[0.6rem] tracking-[0.16em] text-platinum opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100">
         VIEW PROJECT

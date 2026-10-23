@@ -96,7 +96,7 @@ export function ProjectModal({
           <p className="mt-2 text-base text-silver">{project.subtitle}</p>
 
           <div className="mt-6 aspect-[16/10] overflow-hidden rounded-2xl border border-[color:var(--hairline)]">
-            <ProjectVisual variant={project.variant} />
+            <ProjectVisual variant={project.variant} image={project.image} imageAlt={project.imageAlt} />
           </div>
 
           <div className="mt-8 grid gap-x-10 gap-y-6 sm:grid-cols-2">
@@ -139,6 +139,8 @@ export function ProjectModal({
               {project.live && (
                 <a
                   href={project.live}
+                  target={project.live.startsWith("http") ? "_blank" : undefined}
+                  rel={project.live.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-signature-blue to-electric-blue px-5 py-2.5 text-sm font-medium text-white"
                 >
                   View Live

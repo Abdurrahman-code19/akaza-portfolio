@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Frame({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative h-full w-full overflow-hidden bg-gradient-to-br from-midnight via-deep-space to-void p-3 sm:p-5">
@@ -290,9 +292,77 @@ function Portfolio() {
   );
 }
 
-export function ProjectVisual({ variant }: { variant: "ajo" | "agritech" | "zerolimit" | "portfolio" }) {
+
+function SiteShot({
+  image,
+  alt,
+  domain,
+}: {
+  image: string;
+  alt: string;
+  domain: string;
+}) {
+  return (
+    <div className="relative h-full w-full overflow-hidden bg-deep-space p-2.5 sm:p-4">
+      <div className="absolute inset-0 bg-grid opacity-25" aria-hidden="true" />
+      <div className="relative flex h-full flex-col overflow-hidden rounded-lg border border-[color:var(--hairline-strong)] bg-void shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]">
+        <div className="flex shrink-0 items-center gap-2 border-b border-[color:var(--hairline)] bg-midnight/60 px-3 py-2">
+          <span className="flex gap-1">
+            <span className="h-1.5 w-1.5 rounded-full bg-platinum/20" />
+            <span className="h-1.5 w-1.5 rounded-full bg-platinum/20" />
+            <span className="h-1.5 w-1.5 rounded-full bg-platinum/20" />
+          </span>
+          <span className="mx-auto flex max-w-[80%] items-center gap-1.5 rounded-full border border-[color:var(--hairline)] bg-void/60 px-2.5 py-0.5 font-mono text-[5px] tracking-[0.1em] text-silver/60 sm:text-[6px]">
+            <span className="h-1 w-1 rounded-full bg-cyber-cyan/70" />
+            {domain}
+          </span>
+        </div>
+        <div className="relative min-h-0 flex-1">
+          <Image
+            src={image}
+            alt={alt}
+            fill
+            sizes="(max-width: 1024px) 100vw, 60vw"
+            className="object-cover object-top"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void/45 via-transparent to-transparent"
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function ProjectVisual({
+  variant,
+  image,
+  imageAlt,
+}: {
+  variant: "riit" | "mahmud" | "halal" | "ajo" | "agritech" | "zerolimit" | "portfolio";
+  image?: string;
+  imageAlt?: string;
+}) {
   return (
     <div aria-hidden="true" className="h-full w-full">
+      {variant === "riit" && image && (
+        <SiteShot image={image} alt={imageAlt ?? ""} domain="riit.netlify.app" />
+      )}
+      {variant === "mahmud" && image && (
+        <SiteShot
+          image={image}
+          alt={imageAlt ?? ""}
+          domain="mahmudahmadiyyacollegeijede.ng"
+        />
+      )}
+      {variant === "halal" && image && (
+        <SiteShot
+          image={image}
+          alt={imageAlt ?? ""}
+          domain="myhalalcooperative.com.ng"
+        />
+      )}
       {variant === "ajo" && <AJO />}
       {variant === "agritech" && <Agritech />}
       {variant === "zerolimit" && <ZeroLimit />}

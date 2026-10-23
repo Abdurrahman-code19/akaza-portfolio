@@ -14,7 +14,7 @@ export function Footer() {
 
   return (
     <footer className="relative overflow-hidden border-t border-[color:var(--hairline)] bg-void">
-      <div className="container-akaza py-14">
+      <div className="container-akaza py-14 pb-32 lg:pb-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
           <div>
             <Image
@@ -24,7 +24,10 @@ export function Footer() {
               height={38}
               className="h-8 w-auto"
             />
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-silver">
+            <p className="mt-4 font-sans text-lg font-semibold tracking-[-0.01em] text-platinum">
+              {profile.name}
+            </p>
+            <p className="mt-1 max-w-xs text-sm leading-relaxed text-silver">
               {profile.tagline}
             </p>
             <p className="mt-2 font-mono text-[0.6rem] tracking-[0.18em] text-silver/45">

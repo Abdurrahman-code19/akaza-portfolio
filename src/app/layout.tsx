@@ -21,7 +21,7 @@ const siteUrl = profile.site;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "AKAZA — Abdurrahman Oriolowo | Frontend Developer",
+    default: "Abdurrahman Oriolowo — AKAZA | Frontend Developer",
     template: "%s | AKAZA",
   },
   description:
@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     "TypeScript",
     "Tailwind CSS",
     "Lagos Nigeria developer",
+    "RIIT Global Tech",
+    "Mahmud Ahmadiyya College Ijede",
+    "HPMC Halal Cooperative",
   ],
   authors: [{ name: profile.name, url: siteUrl }],
   creator: profile.name,
@@ -53,13 +56,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "AKAZA",
-    title: "AKAZA — Abdurrahman Oriolowo | Frontend Developer",
+    title: "Abdurrahman Oriolowo — AKAZA | Frontend Developer",
     description:
       "Frontend developer, product builder and frontend development tutor creating responsive and visually engaging digital experiences.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AKAZA — Abdurrahman Oriolowo | Frontend Developer",
+    title: "Abdurrahman Oriolowo — AKAZA | Frontend Developer",
     description:
       "Frontend developer, product builder and frontend development tutor creating responsive and visually engaging digital experiences.",
   },
@@ -92,6 +95,7 @@ const personSchema = {
   description:
     "Frontend developer, product builder and frontend development tutor based in Lagos, Nigeria.",
   url: siteUrl,
+  image: new URL(profile.avatar, siteUrl).toString(),
   email: `mailto:${profile.email}`,
   address: {
     "@type": "PostalAddress",

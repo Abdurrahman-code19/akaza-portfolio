@@ -4,6 +4,7 @@ import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Identity } from "@/components/Identity";
+import { MobileDock } from "@/components/MobileDock";
 import { Navbar } from "@/components/Navbar";
 import { Philosophy } from "@/components/Philosophy";
 import { Projects } from "@/components/Projects";
@@ -24,6 +25,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <MobileDock />
     </>
   );
 }

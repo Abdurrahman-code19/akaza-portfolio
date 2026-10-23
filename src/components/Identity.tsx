@@ -104,11 +104,34 @@ export function Identity() {
                 </span>
               </div>
 
-              <div className="relative px-6 pb-2">
-                <p className="font-sans text-[clamp(3rem,7vw,4.6rem)] font-bold leading-none tracking-[-0.05em] text-platinum">
-                  AKAZA
-                </p>
-                <span className="mt-3 block h-px w-16 bg-champagne/60" />
+              <div className="relative px-4 pb-1 sm:px-5">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-electric-blue/20 shadow-[0_0_50px_-20px_rgba(74,163,255,0.5)]">
+                  <Image
+                    src={profile.avatar}
+                    alt={`Portrait of ${profile.name}`}
+                    fill
+                    sizes="(max-width: 1024px) 92vw, 440px"
+                    className="object-cover object-[center_22%]"
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-void via-void/25 to-transparent"
+                    aria-hidden="true"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 p-5">
+                    <div className="flex items-center gap-2">
+                      <span className="h-1 w-1 rounded-full bg-champagne" />
+                      <p className="font-mono text-[0.58rem] tracking-[0.22em] text-champagne/90">
+                        FRONTEND DEVELOPER
+                      </p>
+                    </div>
+                    <p className="mt-2 font-sans text-[clamp(1.6rem,3.4vw,2.2rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-platinum">
+                      Abdurrahman
+                      <br />
+                      Oriolowo
+                    </p>
+                    <span className="mt-3 block h-px w-14 bg-champagne/60" />
+                  </div>
+                </div>
               </div>
 
               <div className="relative mt-6 flex items-center justify-between border-y border-[color:var(--hairline)] px-6 py-4">

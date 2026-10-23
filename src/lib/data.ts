@@ -10,6 +10,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/abdurrahman-oriolowo-aba188352",
   whatsapp: "https://wa.me/2348120211441",
   site: "https://akaza-portfolio-self.vercel.app/",
+  avatar: "/assets/profile/abdurrahman-oriolowo.webp",
 };
 
 export const navLinks = [
@@ -60,7 +61,9 @@ export type Project = {
   github?: string;
   live?: string;
   layout: "right" | "left" | "wide" | "split";
-  variant: "ajo" | "agritech" | "zerolimit" | "portfolio";
+  variant: "riit" | "mahmud" | "halal" | "ajo" | "agritech" | "zerolimit" | "portfolio";
+  image?: string;
+  imageAlt?: string;
   caseStudy: {
     overview: string;
     problem: string;
@@ -72,8 +75,92 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "ajo",
+    id: "riit",
     index: "01",
+    title: "RIIT Global Tech",
+    subtitle: "Corporate Website",
+    category: "Technology",
+    status: "Live",
+    year: "Shipped",
+    description:
+      "A corporate website for an IT training and solutions company, presenting its services, products and training programmes through a confident, technology-led identity.",
+    tech: ["JavaScript", "Responsive UI", "Netlify"],
+    live: "https://riit.netlify.app/",
+    layout: "right",
+    variant: "riit",
+    image: "/assets/projects/riit.webp",
+    imageAlt: "RIIT Global Tech website homepage",
+    caseStudy: {
+      overview:
+        "RIIT Global Tech needed a digital home that could explain a broad IT offer - services, products and training - without losing the company's established identity.",
+      problem:
+        "An IT company that has been operating since 2010 needs a site that feels current, communicates credibility quickly and gives each service area a clear place to live.",
+      approach:
+        "I built the site around a dark, technology-led visual language: a focused hero, clear service pathways and strong calls to action, with a responsive layout that holds together from phone to desktop.",
+      solution:
+        "A live corporate site with a confident hero, structured service and product sections, training information and direct contact points. It is published at riit.netlify.app.",
+      role: "Frontend development and responsive implementation.",
+    },
+  },
+  {
+    id: "mahmud",
+    index: "02",
+    title: "Mahmud Ahmadiyya College",
+    subtitle: "School Website - Ijede",
+    category: "Education",
+    status: "Live",
+    year: "Shipped",
+    description:
+      "A school website for Mahmud Ahmadiyya College, Ijede - sharing the school's identity, admissions path and academic life with parents and prospective students.",
+    tech: ["Responsive UI", "Accessibility", "Web"],
+    live: "https://mahmudahmadiyyacollegeijede.ng/",
+    layout: "left",
+    variant: "mahmud",
+    image: "/assets/projects/mahmud.webp",
+    imageAlt: "Mahmud Ahmadiyya College Ijede website homepage",
+    caseStudy: {
+      overview:
+        "Mahmud Ahmadiyya College, Ijede is an established secondary school. The website gives it a modern public face that families can trust and navigate easily.",
+      problem:
+        "Parents looking for a school need to understand its values, facilities and admissions process quickly. A dated or unclear web presence makes that harder than it should be.",
+      approach:
+        "I organized the site around the questions a parent actually asks: who the school is, what it stands for, what it offers and how to apply - supported by a strong visual identity drawn from the school's purple and gold.",
+      solution:
+        "A live school website with a welcoming hero, clear admissions calls to action, school statistics and straightforward navigation for families.",
+      role: "Frontend development, layout and responsive implementation.",
+    },
+  },
+  {
+    id: "halal",
+    index: "03",
+    title: "HPMC Halal Cooperative",
+    subtitle: "Financial Cooperative Website",
+    category: "Finance",
+    status: "Live",
+    year: "Shipped",
+    description:
+      "A website for a halal cooperative, explaining interest-free financing, membership and ethical investment products in a clear, trustworthy way.",
+    tech: ["Responsive UI", "Web", "Accessibility"],
+    live: "https://www.myhalalcooperative.com.ng/",
+    layout: "right",
+    variant: "halal",
+    image: "/assets/projects/halal.webp",
+    imageAlt: "HPMC Halal Cooperative website homepage",
+    caseStudy: {
+      overview:
+        "HPMC needed a public website that could explain Islamic finance products to a broad audience without jargon, and make membership easy to understand.",
+      problem:
+        "Financial products built on Qard-al-Hasan, Murabaha and profit-sharing are unfamiliar to many visitors. The site has to build trust before it can explain the detail.",
+      approach:
+        "I structured the experience around plain-language product explanations, visible membership steps and a calm, credible visual system using the cooperative's green and gold identity.",
+      solution:
+        "A live cooperative website with a clear hero, product guidance, membership information and accessible navigation for members and prospective members.",
+      role: "Frontend development and responsive implementation.",
+    },
+  },
+  {
+    id: "ajo",
+    index: "04",
     title: "AJO.NG",
     subtitle: "Digital Contribution Savings",
     category: "Fintech",
@@ -98,7 +185,7 @@ export const projects: Project[] = [
   },
   {
     id: "agritech",
-    index: "02",
+    index: "05",
     title: "Agritech",
     subtitle: "Smart Farming Dashboard",
     category: "Agritech",
@@ -124,7 +211,7 @@ export const projects: Project[] = [
   },
   {
     id: "zero-limit",
-    index: "03",
+    index: "06",
     title: "Zero Limit",
     subtitle: "E-commerce Store",
     category: "E-commerce",
@@ -149,7 +236,7 @@ export const projects: Project[] = [
   },
   {
     id: "portfolio",
-    index: "04",
+    index: "07",
     title: "AKAZA",
     subtitle: "Digital Experience",
     category: "Portfolio",

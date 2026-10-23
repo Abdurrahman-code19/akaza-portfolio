@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { profile } from "@/lib/data";
 import { Icon } from "./Icon";
 import { HeroVisual } from "./HeroVisual";
@@ -23,7 +24,7 @@ export function Hero() {
           <div>
             <div className="hero-rise flex items-center gap-3" style={{ "--hero-delay": "80ms" } as React.CSSProperties}>
               <span className="status-dot h-1.5 w-1.5 rounded-full bg-cyber-cyan" />
-              <p className="eyebrow text-silver">AKAZA / FRONTEND DEVELOPER</p>
+              <p className="eyebrow text-silver">ABDURRAHMAN ORIOLOWO / FRONTEND DEVELOPER</p>
             </div>
 
             <h1 className="mt-6 font-sans text-[clamp(2.6rem,7.6vw,6.2rem)] font-semibold leading-[0.95] tracking-[-0.04em] text-platinum">
@@ -43,12 +44,28 @@ export function Hero() {
             </h1>
 
             <div
-              className="hero-rise mt-8 flex flex-wrap items-center gap-x-4 gap-y-1"
+              className="hero-rise mt-10 flex items-center gap-4"
               style={{ "--hero-delay": "540ms" } as React.CSSProperties}
             >
-              <p className="text-lg font-medium text-platinum">{profile.name}</p>
-              <span className="hidden h-1 w-1 rounded-full bg-champagne sm:block" />
-              <p className="text-sm text-silver">{profile.role}</p>
+              <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-platinum/25 shadow-[0_0_0_3px_rgba(74,163,255,0.12),0_12px_36px_-12px_rgba(74,163,255,0.45)] sm:h-16 sm:w-16">
+                <Image
+                  src={profile.avatar}
+                  alt={`Portrait of ${profile.name}`}
+                  fill
+                  sizes="64px"
+                  priority
+                  className="object-cover object-[center_25%]"
+                />
+              </span>
+              <div className="min-w-0">
+                <p className="font-sans text-[clamp(1.4rem,2.6vw,2.05rem)] font-semibold leading-tight tracking-[-0.02em] text-platinum">
+                  {profile.name}
+                </p>
+                <p className="mt-0.5 text-sm text-silver">
+                  {profile.role}
+                  <span className="hidden sm:inline"> · AKAZA</span>
+                </p>
+              </div>
             </div>
 
             <p
