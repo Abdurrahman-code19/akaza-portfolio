@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
 
 const skills = {
   "Frontend Development": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Tailwind CSS", "Bootstrap", "Responsive Web Design"],
@@ -48,7 +47,6 @@ const projects = [
 ];
 
 export default function Home() {
-  // const [mobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#030508] via-[#07111F] to-[#030508] text-[#E2E8F0]">
