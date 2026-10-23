@@ -11,7 +11,7 @@ export const profile = {
   whatsapp: "https://wa.me/2348120211441",
   site: "https://akaza-portfolio-self.vercel.app/",
   avatar: "/assets/profile/abdurrahman-oriolowo.webp",
-  cv: "/cv.pdf",
+  cv: "/AKAZA_CV.pdf",
 };
 
 export const navLinks = [
