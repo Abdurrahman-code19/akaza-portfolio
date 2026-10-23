@@ -1,6 +1,17 @@
 'use client';
 
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
+
+const navLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#certifications', label: 'Certifications' },
+  { href: '#contact', label: 'Contact' },
+];
 
 const skills = {
   "Frontend Development": ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Tailwind CSS", "Bootstrap", "Responsive Web Design"],
@@ -47,6 +58,14 @@ const projects = [
 ];
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#030508] via-[#07111F] to-[#030508] text-[#E2E8F0]">
@@ -54,31 +73,81 @@ export default function Home() {
       <nav className="fixed top-0 w-full bg-[#030508]/90 backdrop-blur-lg border-b border-[#12263F] z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <div className="flex items-center space-x-3">
+            <a href="#home" className="flex items-center space-x-3" aria-label="AKAZA home">
               <Image 
                 src="/assets/logos/AKAZA-header-logo.png" 
                 alt="AKAZA Logo" 
                 width={120} 
                 height={40}
                 className="h-10 w-auto"
+                priority
               />
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                <a href="#home" className="hover:text-[#4AA3FF] transition-colors duration-300">Home</a>
-                <a href="#about" className="hover:text-[#4AA3FF] transition-colors duration-300">About</a>
-                <a href="#skills" className="hover:text-[#4AA3FF] transition-colors duration-300">Skills</a>
-                <a href="#projects" className="hover:text-[#4AA3FF] transition-colors duration-300">Projects</a>
-                <a href="#experience" className="hover:text-[#4AA3FF] transition-colors duration-300">Experience</a>
-                <a href="#certifications" className="hover:text-[#4AA3FF] transition-colors duration-300">Certifications</a>
-                <a href="#contact" className="hover:text-[#4AA3FF] transition-colors duration-300">Contact</a>
+            </a>
+
+            {/* Desktop nav */}
+            <div className="hidden lg:block">
+              <div className="ml-10 flex items-baseline space-x-6">
+                {navLinks.map((link) => (
+                  <a key={link.href} href={link.href} className="hover:text-[#4AA3FF] transition-colors duration-300">
+                    {link.label}
+                  </a>
+                ))}
               </div>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <a href="/cv.pdf" download className="px-6 py-2.5 bg-gradient-to-r from-[#3082C5] to-[#4AA3FF] hover:shadow-[0_0_20px_rgba(74,163,255,0.4)] rounded-lg transition-all duration-300 font-medium">
                 Download CV
               </a>
             </div>
+
+            {/* Mobile hamburger */}
+            <button
+              type="button"
+              onClick={() => setMenuOpen((v) => !v)}
+              className="lg:hidden inline-flex items-center justify-center p-2 rounded-lg border border-[#1B365D] text-[#E2E8F0] hover:border-[#4AA3FF] transition-colors"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+            >
+              {menuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        <div
+          id="mobile-menu"
+          className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
+            menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="px-4 sm:px-6 pb-6 pt-2 space-y-1 bg-[#030508]/95 backdrop-blur-lg border-t border-[#12263F]">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="block px-3 py-3 rounded-lg text-[#E2E8F0] hover:bg-[#12263F] hover:text-[#4AA3FF] transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="/cv.pdf"
+              download
+              onClick={() => setMenuOpen(false)}
+              className="block mt-2 text-center px-6 py-3 bg-gradient-to-r from-[#3082C5] to-[#4AA3FF] rounded-lg font-medium"
+            >
+              Download CV
+            </a>
           </div>
         </div>
       </nav>
@@ -198,8 +267,13 @@ export default function Home() {
             <p className="text-[#94A3B8] text-lg">Technologies and skills I work with</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.entries(skills).map(([category, skillList]) => (
-              <div key={category} className="glass-card p-6 rounded-xl hover:border-[#4AA3FF]/50 transition-all duration-300">
+            {Object.entries(skills).map(([category, skillList], index) => (
+              <div
+                key={category}
+                className={`glass-card p-6 rounded-xl hover:border-[#4AA3FF]/50 transition-all duration-300 ${
+                  index === 0 ? 'lg:col-span-2' : ''
+                }`}
+              >
                 <h3 className="text-xl font-semibold mb-4 text-[#4AA3FF]">{category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {skillList.map((skill) => (
