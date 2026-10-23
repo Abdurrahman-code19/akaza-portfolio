@@ -11,7 +11,8 @@ type IconName =
   | "close"
   | "external"
   | "certificate"
-  | "code";
+  | "code"
+  | "download";
 
 const paths: Record<IconName, React.ReactNode> = {
   "arrow-up-right": (
@@ -74,6 +75,12 @@ const paths: Record<IconName, React.ReactNode> = {
   ),
   code: (
     <path strokeLinecap="round" strokeLinejoin="round" d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-9-2 10" />
+  ),
+  download: (
+    <>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v11m0 0 4-4m-4 4-4-4" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 19h14" />
+    </>
   ),
 };
 

@@ -33,6 +33,14 @@ export function Footer() {
             <p className="mt-2 font-mono text-[0.6rem] tracking-[0.18em] text-silver/45">
               FRONTEND DEVELOPER & PRODUCT BUILDER
             </p>
+            <a
+              href={profile.cv}
+              download="AKAZA_CV.pdf"
+              className="group mt-5 inline-flex items-center gap-1.5 rounded-full border border-[color:var(--hairline-strong)] px-4 py-2 font-mono text-[0.6rem] tracking-[0.16em] text-platinum transition-colors hover:border-electric-blue/50 hover:text-electric-blue"
+            >
+              DOWNLOAD CV
+              <Icon name="download" className="h-3.5 w-3.5" />
+            </a>
           </div>
 
           <nav aria-label="Footer">

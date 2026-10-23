@@ -8,7 +8,7 @@ type MagneticButtonProps = {
   variant?: "primary" | "ghost";
   className?: string;
   strength?: number;
-  download?: boolean;
+  download?: boolean | string;
   external?: boolean;
   ariaLabel?: string;
 };

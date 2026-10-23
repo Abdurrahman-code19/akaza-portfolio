@@ -88,6 +88,15 @@ export function Hero() {
                 Let&apos;s Talk
                 <Icon name="arrow-up-right" className="arrow-shift h-4 w-4" />
               </MagneticButton>
+              <MagneticButton
+                href={profile.cv}
+                variant="ghost"
+                download="AKAZA_CV.pdf"
+                ariaLabel="Download Abdurrahman Oriolowo's CV as a PDF"
+              >
+                Download CV
+                <Icon name="download" className="h-4 w-4" />
+              </MagneticButton>
             </div>
 
             <div
