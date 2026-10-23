@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Icon } from "@/components/Icon";
 
 export default function NotFound() {
@@ -33,19 +34,19 @@ export default function NotFound() {
           still here. Let&apos;s get you back.
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-signature-blue to-electric-blue px-6 py-3.5 text-sm font-medium text-white transition-shadow hover:shadow-[0_10px_40px_-8px_rgba(74,163,255,0.5)]"
           >
             Back Home
             <Icon name="arrow-up-right" className="h-4 w-4" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#work"
             className="inline-flex items-center gap-2 rounded-full border border-[color:var(--hairline-strong)] px-6 py-3.5 text-sm font-medium text-platinum transition-colors hover:border-electric-blue/50"
           >
             View Work
-          </a>
+          </Link>
         </div>
       </div>
     </main>
