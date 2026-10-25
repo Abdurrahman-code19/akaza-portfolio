@@ -216,22 +216,26 @@ export const projects: Project[] = [
     title: "Zero Limit",
     subtitle: "E-commerce Store",
     category: "E-commerce",
-    status: "In Progress",
-    year: "Build",
+    status: "Live",
+    year: "Shipped",
     description:
-      "A premium clothing and accessories brand with a minimal dark identity, considered product presentation and responsive storefront.",
-    tech: ["HTML", "CSS", "JavaScript"],
+      "A live premium clothing and accessories storefront with a minimal dark identity, considered product presentation and a responsive shopping experience.",
+    tech: ["HTML", "CSS", "JavaScript", "Responsive UI"],
+    github: "https://github.com/Abdurrahman-code19/zero-limit",
+    live: "https://zerolimit.store/",
     layout: "wide",
     variant: "zerolimit",
+    image: "/assets/projects/zerolimit.webp",
+    imageAlt: "Zero Limit premium fashion storefront homepage",
     caseStudy: {
       overview:
-        "Zero Limit is a storefront concept for a premium clothing and accessories brand, built around restraint: dark surfaces, generous space and product imagery doing the talking.",
+        "Zero Limit is a live storefront for a premium clothing and accessories brand, built around restraint: dark surfaces, generous space and product imagery doing the talking.",
       problem:
         "Premium fashion needs a storefront that feels as considered as the product. Busy templates and loud layouts undercut the brand rather than support it.",
       approach:
         "I started from a minimal dark identity and built the layout around product presentation — large imagery, quiet navigation and a clear path from collection to product.",
       solution:
-        "A responsive storefront concept with a minimal identity, product-forward sections and subtle luxury detailing. It remains a work in progress.",
+        "A live, responsive storefront at zerolimit.store with a minimal identity, product-forward sections and subtle luxury detailing.",
       role: "Frontend development and visual direction.",
     },
   },
@@ -301,7 +305,7 @@ export const education = [
   {
     institution: "Muslim Kids and Teens College",
     qualification: "Secondary Education",
-    meta: "Graduated 2024",
+    meta: "Graduated 2022",
   },
 ];
 

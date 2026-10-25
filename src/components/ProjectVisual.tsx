@@ -365,7 +365,12 @@ export function ProjectVisual({
       )}
       {variant === "ajo" && <AJO />}
       {variant === "agritech" && <Agritech />}
-      {variant === "zerolimit" && <ZeroLimit />}
+      {variant === "zerolimit" &&
+        (image ? (
+          <SiteShot image={image} alt={imageAlt ?? ""} domain="zerolimit.store" />
+        ) : (
+          <ZeroLimit />
+        ))}
       {variant === "portfolio" && <Portfolio />}
     </div>
   );
