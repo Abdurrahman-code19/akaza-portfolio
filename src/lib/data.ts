@@ -87,6 +87,7 @@ export const projects: Project[] = [
       "A corporate website for an IT training and solutions company, presenting its services, products and training programmes through a confident, technology-led identity.",
     tech: ["JavaScript", "Responsive UI", "Netlify"],
     live: "https://riit.netlify.app/",
+    github: "https://github.com/Abdurrahman-code19/Riit-Global-Tech",
     layout: "right",
     variant: "riit",
     image: "/assets/projects/riit.webp",
@@ -115,6 +116,7 @@ export const projects: Project[] = [
       "A school website for Mahmud Ahmadiyya College, Ijede - sharing the school's identity, admissions path and academic life with parents and prospective students.",
     tech: ["Responsive UI", "Accessibility", "Web"],
     live: "https://mahmudahmadiyyacollegeijede.ng/",
+    github: "https://github.com/Abdurrahman-code19/MACI",
     layout: "left",
     variant: "mahmud",
     image: "/assets/projects/mahmud.webp",
@@ -143,6 +145,7 @@ export const projects: Project[] = [
       "A website for a halal cooperative, explaining interest-free financing, membership and ethical investment products in a clear, trustworthy way.",
     tech: ["Responsive UI", "Web", "Accessibility"],
     live: "https://www.myhalalcooperative.com.ng/",
+    github: "https://github.com/Abdurrahman-code19/HPMC",
     layout: "right",
     variant: "halal",
     image: "/assets/projects/halal.webp",
@@ -170,6 +173,7 @@ export const projects: Project[] = [
     description:
       "A digital savings-group concept designed to coordinate private contribution groups, payment schedules, reminders and rotating payouts.",
     tech: ["React", "TypeScript", "Node.js"],
+    github: "https://github.com/Abdurrahman-code19/ajo-ng",
     layout: "right",
     variant: "ajo",
     caseStudy: {
