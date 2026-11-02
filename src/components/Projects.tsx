@@ -162,11 +162,9 @@ export function Projects() {
             if (project.layout === "wide") {
               return (
                 <Reveal key={project.id} className="group">
-                  <div className="max-w-2xl">
+                  <ProjectVisualButton project={project} onOpen={() => setSelected(project)} />
+                  <div className="mt-10 max-w-2xl">
                     <ProjectBody project={project} onOpen={() => setSelected(project)} />
-                  </div>
-                  <div className="mt-8">
-                    <ProjectVisualButton project={project} onOpen={() => setSelected(project)} />
                   </div>
                 </Reveal>
               );
