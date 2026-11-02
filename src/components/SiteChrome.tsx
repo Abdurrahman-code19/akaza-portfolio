@@ -14,8 +14,8 @@ function SplashScreen() {
       return;
     }
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const hold = reduced ? 350 : 1750;
-    const fade = reduced ? 150 : 550;
+    const hold = reduced ? 350 : 2050;
+    const fade = reduced ? 150 : 650;
     const leaveTimer = window.setTimeout(() => setLeaving(true), hold);
     const doneTimer = window.setTimeout(() => {
       setMounted(false);
