@@ -85,12 +85,12 @@ export const projects: Project[] = [
     year: "Shipped",
     description:
       "A corporate website for an IT training and solutions company, presenting its services, products and training programmes through a confident, technology-led identity.",
-    tech: ["JavaScript", "Responsive UI", "Netlify"],
-    live: "https://riit.netlify.app/",
+    tech: ["React", "Responsive UI", "Vercel"],
+    live: "https://riit-global-tech.vercel.app/",
     github: "https://github.com/Abdurrahman-code19/Riit-Global-Tech",
     layout: "right",
     variant: "riit",
-    image: "/assets/projects/riit.webp",
+    image: "/assets/projects/riit-2026.webp",
     imageAlt: "RIIT Global Tech website homepage",
     caseStudy: {
       overview:
@@ -100,7 +100,7 @@ export const projects: Project[] = [
       approach:
         "I built the site around a dark, technology-led visual language: a focused hero, clear service pathways and strong calls to action, with a responsive layout that holds together from phone to desktop.",
       solution:
-        "A live corporate site with a confident hero, structured service and product sections, training information and direct contact points. It is published at riit.netlify.app.",
+        "A live corporate site with a confident hero, structured service and product sections, training information and direct contact points. It is published at riit-global-tech.vercel.app.",
       role: "Frontend development and responsive implementation.",
     },
   },

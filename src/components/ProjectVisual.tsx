@@ -347,7 +347,7 @@ export function ProjectVisual({
   return (
     <div aria-hidden="true" className="h-full w-full">
       {variant === "riit" && image && (
-        <SiteShot image={image} alt={imageAlt ?? ""} domain="riit.netlify.app" />
+        <SiteShot image={image} alt={imageAlt ?? ""} domain="riit-global-tech.vercel.app" />
       )}
       {variant === "mahmud" && image && (
         <SiteShot
